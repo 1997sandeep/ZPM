@@ -1,0 +1,41 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Maintain PM Role Authorization For ERN Process",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_PMROLEAUTHORIZATION_O4",
+    "serviceName": "ZUI_PMROLEAUTHORIZATION_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "PmRoleAuthorizatAll",
+    "name": "PM Role Authorization For ERN Process",
+    "transportObject": "ZPMROLEAUTHORIZATIONT",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "PmRoleAuthorizatAll",
+        "variantManagement": "control",
+        "showTransportSelectionStrip": true
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "PmRoleAuthorization",
+        "tableType": "gridTable",
+        "selectAll": true,
+        "rowCountMode": "auto",
+        "frozenColumnCount": 4,
+        "creationModeName": "inlineCreationRows",
+        "createAtEnd": true,
+        "condensedTableLayout": true,
+        "widthIncludingColumnHeader": true
+      }
+    ]
+  }
+}

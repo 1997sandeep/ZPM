@@ -1,0 +1,38 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'LOG BOOK USER TABLE', 
+    typeNamePlural: 'LOG BOOK USER TABLE', 
+    title: {
+      type: #STANDARD, 
+      value: 'Usirid'
+    }
+  }
+}
+annotate view ZI_LogBookUserTable with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'LogBookUserTable', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'LOG BOOK USER TABLE', 
+    position: 1 
+  } ]
+  Usirid;
+  
+  @UI.identification: [ {
+    position: 2 , 
+    label: 'Name'
+  } ]
+  @UI.lineItem: [ {
+    position: 2 , 
+    label: 'Name'
+  } ]
+  Name;
+}

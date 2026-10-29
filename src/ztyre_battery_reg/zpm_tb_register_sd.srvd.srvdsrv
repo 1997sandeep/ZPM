@@ -1,0 +1,17 @@
+@EndUserText.label: 'Tyre & Battery Register SD'
+define service ZPM_TB_REGISTER_SD {
+  expose ZPM_TB_REGISTER;
+  expose ZPM_TB_REG1;
+  expose ZPM_TB_REG2;
+  expose ZPM_TB_REG3;
+  expose ZPM_TB_REG4;
+  expose ZPM_TB_REG_5;
+  expose ZPM_TB_REG_PROJECT_F4;
+  expose ZPM_TB_REG_ORDER_NO_F4;
+  expose ZPM_TB_REG_OBJECT_TYPE_F4;
+  expose ZPM_TB_REG_PRODUCT_GRP_F4;
+  expose ZPM_TB_REG_EQUIPMENT_F4;
+  expose ZPM_TB_REG_MATERIAL_F4;
+  expose ZPM_TB_REG_GI_NO_F4;
+  expose ZPM_TB_REG_TYRE_SL_NO_F4;
+}

@@ -1,0 +1,10 @@
+@EndUserText.label: 'ERN Service'
+define service ZERN_service {
+  expose ZC_ERN_PROCESS;
+  expose I_TechnicalObjectTypeText;
+  expose I_Plant;
+  expose Zpm_ERN_ROles;
+  expose ZPM_CHECK_Availability;
+  expose ZI_PO_VH                  as I_Purchaserequisitionitem;
+  expose ZI_PO_SUBCON              as zern_purchagesorder_item;
+}

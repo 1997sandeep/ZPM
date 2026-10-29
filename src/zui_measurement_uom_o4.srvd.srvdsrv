@@ -1,0 +1,12 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_MEASUREMENT_UOM'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_MEASUREMENT_UOM'
+  }
+}
+define service ZUI_MEASUREMENT_UOM_O4
+  provider contracts odata_v4_ui {
+  expose ZC_MEASUREMENT_UOM;
+}

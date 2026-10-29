@@ -1,0 +1,114 @@
+unmanaged implementation in class zbp_pm_rtpins unique;
+strict ( 1 );
+
+define behavior for ZPM_RTPINS //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  mapping for zpmequip
+    {
+      Equipment     = zequipment_id;
+      EquipmentName = zequipment_desc;
+      zinsurance    = Zinsurance;
+      zinval        = zinval;
+      zregcer       = zregcer;
+      zregcrval     = zregcrval;
+      zhypo         = zhypo;
+      zroadtax      = zroadtax;
+      zroadval      = zroadval;
+      zgrtax        = zgrtax;
+      zgrtaxval     = zgrtaxval;
+      zroadper      = zroadper;
+      zroadperval   = zroadperval;
+      zpuc          = zpuc;
+      zpucval       = zpucval;
+      zfitness      = zfitness;
+      zfitval       = zfitval;
+      Znoc          = Znoc;
+      znocval       = znocval;
+      zpmcal        = zpmcal;
+      zcalval       = zcalval;
+      zpmwar        = zpmwar;
+      zwarval       = zwarval;
+      zremarks      = zremarks;
+      zins_comp     =  zins_comp;
+      zins_num      = zins_num;
+      zinv_num      = zinv_num;
+
+  zins_str_date     = zins_str_date;
+  zins_iss_sate     = zins_iss_sate;
+  zrc_str_date      = zrc_str_date ;
+  zrc_iss_sate      = zrc_iss_sate;
+  zhypo_fin         = zhypo_fin ;
+  zhypo_fin_date    = zhypo_fin_date ;
+  zroad_tax_date    = zroad_tax_date;
+  zroad_iss_state   = zroad_iss_state ;
+  zgreen_tax_date   = zgreen_tax_date;
+  zgreen_tax_state  =  zgreen_tax_state;
+  znat_str_date     = znat_str_date ;
+  znat_str_state    = znat_str_state;
+  zroad_per_date    = zroad_per_date;
+  zroad_per_sate    = zroad_per_sate ;
+  zpuc_date         = zpuc_date ;
+  zpuc_sate         = zpuc_sate;
+  zfit_date         = zfit_date ;
+  zfit_sate         = zfit_sate ;
+  znoc_date         = znoc_date;
+  znoc_sate         = znoc_sate ;
+
+  zins_inv_no  = zins_inv_no       ;
+  zins_inv_date = zins_inv_date      ;
+  zins_sum_ass = zins_sum_ass        ;
+  zins_type  = zins_type           ;
+  zins_doc_type = zins_doc_type        ;
+  zins_doc_remarks = zins_doc_remarks     ;
+  zroad_tax_certf_no = zroad_tax_certf_no   ;
+  zroad_tax_certf_date  = zroad_tax_certf_date ;
+  zroad_tax_status = zroad_tax_status     ;
+  zroad_tax_amount  = zroad_tax_amount     ;
+  zroad_tax_remarks = zroad_tax_remarks    ;
+  zgreen_rec_no = zgreen_rec_no        ;
+ zgreen_tax_result = zgreen_tax_result    ;
+  zgreen_tax_amount = zgreen_tax_amount    ;
+  zgreen_tax_remarks = zgreen_tax_remarks   ;
+  znati_perm = znati_perm;
+  znati_perm_iss = znati_perm_iss       ;
+  znati_perm_no = znati_perm_no        ;
+  znati_perm_date  = znati_perm_date     ;
+  znati_perm_place  = znati_perm_place     ;
+  znati_doc_type  = znati_doc_type       ;
+  znati_perm_amt = znati_perm_amt       ;
+  znati_doc_remarks = znati_doc_remarks    ;
+  zroad_perm_iss = zroad_perm_iss       ;
+  zroad_perm_no = zroad_perm_no        ;
+  zroad_perm_date = zroad_perm_date      ;
+  zroad_doc_type = zroad_doc_type       ;
+  zroad_perm_amt = zroad_perm_amt       ;
+  zroad_doc_remarks = zroad_doc_remarks    ;
+  zpuc_cert_no  = zpuc_cert_no ;
+  zpuc_comp = zpuc_comp ;
+  zpuc_issuby = zpuc_issuby;
+  zpuc_result = zpuc_result ;
+  zpuc_amt = zpuc_amt ;
+  zpuc_remarks = zpuc_remarks;
+  zfit_comp_name = zfit_comp_name;
+  zfit_cert_no = zfit_cert_no ;
+   zfit_cert_date = zfit_cert_date;
+   zfit_result = zfit_result ;
+  zfit_amt = zfit_amt ;
+  zfit_remarks = zfit_remarks;
+  zbank_name = zbank_name ;
+  zbank_noc_date = zbank_noc_date;
+  zbank_loan_no = zbank_loan_no ;
+  zbank_noc_status = zbank_noc_status;
+  zbank_remarks = zbank_remarks ;
+  zemmision_norms = zemmision_norms;
+
+
+    }
+}

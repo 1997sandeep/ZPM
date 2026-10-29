@@ -1,0 +1,12 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_PMT_COMPLIANCE000'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_PMT_COMPLIANCE000'
+  }
+}
+define service ZUI_PMT_COMPLIANCE_O4
+  provider contracts odata_v4_ui {
+  expose ZC_PMT_COMPLIANCE000;
+}

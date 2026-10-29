@@ -1,0 +1,46 @@
+unmanaged implementation in class zbp_pm_tb_register unique;
+strict ( 1 );
+
+define behavior for ZPM_TB_REGISTER //alias <alias_name>
+//persistent table zpmt_tb_register
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( mandatory ) project, obj_type, equipment;
+ // field ( readonly ) project, obj_type, equipment;
+
+  mapping for zpmt_tb_register
+  {
+  project           = project         ;
+  obj_type          = obj_type        ;
+  equipment         = equipment       ;
+  asset_code        = asset_code      ;
+  asset_des         = asset_des       ;
+  reg_no            = reg_no          ;
+  item_type         = item_type       ;
+  product_type      = product_type    ;
+  product_group     = product_group   ;
+  material          = material        ;
+  material_des      = material_des    ;
+  item_size         = item_size       ;
+  item_make         = item_make       ;
+  order_no          = order_no        ;
+  gi_no             = gi_no           ;
+  tyre_sl_no        = tyre_sl_no      ;
+  position_of_item  = position_of_item;
+  fit_on_date       = fit_on_date     ;
+  fit_at_read       = fit_at_read     ;
+  dismant_date      = dismant_date    ;
+  dismant_item_sno  = dismant_item_sno;
+  dismant_at_read   = dismant_at_read ;
+  item_life_kmr     = item_life_kmr   ;
+  item_life_days    = item_life_days  ;
+  item_status       = item_status     ;
+  remarks           =  remarks        ;
+  }
+
+}

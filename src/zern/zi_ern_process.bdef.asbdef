@@ -1,0 +1,57 @@
+unmanaged implementation in class zbp_i_ern_process unique;
+strict ( 2 );
+
+define behavior for ZI_ERN_PROCESS alias ERN_PROCESS
+//persistent table zern_process
+lock master
+authorization master ( instance )
+//etag master <field_name>
+late numbering
+{
+  create ( authorization : none );
+  update ( authorization : none );
+  delete ( authorization : none );
+
+
+  static action ( authorization : none ) checkAuthorization
+    parameter ZERN_S_CHECK_AUTH
+    result [1..*] ZERN_S_CHECK_AUTH_RESULT;
+
+  field ( readonly : update ) sl_no, Werks, Req_No;
+
+  mapping for zern_process
+    {
+      werks         = werks;
+      req_no        = req_no;
+      req_status    = req_status;
+      val_from      = val_from;
+      val_to        = val_to;
+      c_date        = c_date;
+      c_by          = c_by;
+      last_cdate    = last_cdate;
+      last_cby      = last_cby;
+      eqart         = equicat;
+      eartx         = evtype;
+      capacity      = capacity;
+      qty           = qty;
+      form_dt       = form_dt;
+      to_dt         = to_dt;
+      req_type      = req_type;
+      sts_by_pm     = sts_by_pm;
+      sts_by_bgt    = sts_by_bgt;
+      equnr         = equnr;
+      s_pant        = s_pant;
+      status        = status;
+      banfn         = banfn;
+      bsart         = doctype;
+      ebeln         = ebeln;
+      lifnr         = lifnr;
+      s_date        = s_date;
+      s_by          = s_by;
+      remark        = remark;
+      flag          = flag;
+      meins         = meins;
+      dehire_dt     = dehire_dt;
+      dehire_remark = dehire_remark;
+    }
+}

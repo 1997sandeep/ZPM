@@ -1,0 +1,8 @@
+@EndUserText.label: 'ERN Report Service Definition'
+define service ZPM_ERN_REPORT {
+  expose ZC_ERN_REPORT           as ERNReport;
+  expose ZI_ERN_REPORT           as maincds;
+  expose ZERP_PLANT_F4           as plantf4;
+  expose ZERP_EQUIPT_OBJECT_T_F4;
+  expose ZERP_PR_F4              as prdetail;
+}

@@ -1,0 +1,52 @@
+unmanaged implementation in class zbp_sd_logbook_un unique;
+strict ( 1 );
+
+define behavior for ZSD_LOGBOOK_UN //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  mapping for zsd_log_book_un
+    {
+      LogID         = key_field;
+      Equipment     = equip_no;
+      EquipmentName = equip_desc;
+      FuncLoc       = func_loc;
+      FuncDesc      = func_desc;
+//      RegNo         = reg_no;
+      Dat           = dat;
+      EquipObj      = equip_obj;
+      Wbs           = wbs;
+      StartHr       = start_hr;
+      CloseHr       = close_hr;
+      WorkHr        = work_hr;
+      WorkingHr     = working_hr;
+      IdleHr        = idle_hr;
+      BreakHr       = break_hr;
+      FuelTyp       = fuel_typ;
+      FuelQty       = fuelqty;
+      Fuel          = fuel;
+      StartKm       = start_km;
+      CloseKm       = close_km;
+      ReadKm        = read_km;
+      Remarks       = remarks;
+      Plant         = plant;
+      Meaptkm       = meapt_km;
+      Meaptwh       = meapt_wh;
+      ChangeInd     = change_ind;
+      Shift         = shift;
+      MachineNo     = machine_no;
+      TotPlntPrd    = tot_plnt_prd;
+      CummHrs       = cumm_hrs;
+      CummHrsMp     = cumm_hrs_mp;
+      CummKm        = cumm_km;
+      CummKmMp      = cumm_km_mp;
+      Flag          = flag;
+    }
+
+}

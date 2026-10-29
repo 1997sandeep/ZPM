@@ -1,0 +1,475 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Zequipment'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Zequipment'
+annotate view ZC_PMT_COMPLIANCE000 with
+{
+//  @EndUserText.label: 'Zequipment'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+//  @UI.identification: [ {
+//    position: 10 , 
+//    label: 'Zequipment'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 10 , 
+//    label: 'Zequipment'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 10 
+//  } ]
+//  Zequipment;
+//  
+//  @EndUserText.label: 'Zcomptype'
+//  @UI.identification: [ {
+//    position: 20 , 
+//    label: 'Zcomptype'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 20 , 
+//    label: 'Zcomptype'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 20 
+//  } ]
+//  Zcomptype;
+
+@EndUserText.label: 'Equipment'
+@Consumption.valueHelpDefinition: [
+  {
+    entity: {
+      name: 'I_Equipment',
+      element: 'Equipment'
+    }
+  }
+]
+@UI.identification: [ { position: 10, label: 'Equipment' } ]
+//@UI.lineItem: [ { position: 10, label: 'Equipment' } ]
+//@UI.selectionField: [ { position: 10 } ]
+Zequipment;
+
+@EndUserText.label: 'Compliance Type'
+//@Consumption.valueHelpDefinition: [
+//  {
+//    entity: {
+//      name: 'ZR_PMT_COMPLIANCE000',
+//      element: 'Zcomptype'
+//    }
+//  }
+//]
+@UI.identification: [ { position: 20, label: 'Compliance Type' } ]
+//@UI.lineItem: [ { position: 20, label: 'Compliance Type' } ]
+//@UI.selectionField: [ { position: 20 } ]
+Zcomptype;
+
+//  
+//  @EndUserText.label: 'ZcomplianceNumber'
+//  @UI.identification: [ {
+//    position: 30 , 
+//    label: 'ZcomplianceNumber'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 30 , 
+//    label: 'ZcomplianceNumber'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 30 
+//  } ]
+//  ZcomplianceNumber;
+//  
+//  @UI.identification: [ {
+//    position: 40 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 40 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 40 
+//  } ]
+//  Zplant;
+//  
+//  @EndUserText.label: 'Zreceipt'
+//  @UI.identification: [ {
+//    position: 50 , 
+//    label: 'Zreceipt'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 50 , 
+//    label: 'Zreceipt'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 50 
+//  } ]
+//  Zreceipt;
+//  
+//  @EndUserText.label: 'Zstdate'
+//  @UI.identification: [ {
+//    position: 60 , 
+//    label: 'Zstdate'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 60 , 
+//    label: 'Zstdate'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 60 
+//  } ]
+//  Zstdate;
+
+@EndUserText.label: 'State'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'State'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'State'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  Zstate;
+  
+  @EndUserText.label: 'Expiry Type'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Expiry Type'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Expiry Type'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  Zexptype;
+  
+//  @EndUserText.label: 'Zenddate'
+//  @UI.identification: [ {
+//    position: 80 , 
+//    label: 'Zenddate'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 80 , 
+//    label: 'Zenddate'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 80 
+//  } ]
+//  Zenddate;
+//  
+//  @EndUserText.label: 'Zcurrency'
+//  @UI.identification: [ {
+//    position: 90 , 
+//    label: 'Zcurrency'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 90 , 
+//    label: 'Zcurrency'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 90 
+//  } ]
+//  Zcurrency;
+//  
+//  @EndUserText.label: 'Zamount'
+//  @UI.identification: [ {
+//    position: 100 , 
+//    label: 'Zamount'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 100 , 
+//    label: 'Zamount'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 100 
+//  } ]
+//  Zamount;
+//  
+//  @EndUserText.label: 'Ztax'
+//  @UI.identification: [ {
+//    position: 110 , 
+//    label: 'Ztax'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 110 , 
+//    label: 'Ztax'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 110 
+//  } ]
+//  Ztax;
+//  
+//  @EndUserText.label: 'Ztotal'
+//  @UI.identification: [ {
+//    position: 120 , 
+//    label: 'Ztotal'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 120 , 
+//    label: 'Ztotal'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 120 
+//  } ]
+//  Ztotal;
+//  
+//  @EndUserText.label: 'Zstate'
+//  @UI.identification: [ {
+//    position: 130 , 
+//    label: 'Zstate'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 130 , 
+//    label: 'Zstate'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 130 
+//  } ]
+//  Zstate;
+//  
+//  @EndUserText.label: 'Zowner'
+//  @UI.identification: [ {
+//    position: 140 , 
+//    label: 'Zowner'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 140 , 
+//    label: 'Zowner'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 140 
+//  } ]
+//  Zowner;
+//  
+//  @EndUserText.label: 'Zdms'
+//  @UI.identification: [ {
+//    position: 150 , 
+//    label: 'Zdms'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 150 , 
+//    label: 'Zdms'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 150 
+//  } ]
+//  Zdms;
+//  
+//  @EndUserText.label: 'Zfile'
+//  @UI.identification: [ {
+//    position: 160 , 
+//    label: 'Zfile'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 160 , 
+//    label: 'Zfile'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 160 
+//  } ]
+//  Zfile;
+//  
+//  @EndUserText.label: 'Zremark'
+//  @UI.identification: [ {
+//    position: 170 , 
+//    label: 'Zremark'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 170 , 
+//    label: 'Zremark'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 170 
+//  } ]
+//  Zremark;
+  
+  @EndUserText.label: 'Insurance Type'
+  @UI.identification: [ {
+    position: 180 , 
+    label: 'Insurance Type'
+  } ]
+  @UI.lineItem: [ {
+    position: 180 , 
+    label: 'Insurance Type'
+  } ]
+  @UI.selectionField: [ {
+    position: 180 
+  } ]
+  Zinstype;
+  
+//  @EndUserText.label: 'Zinscompany'
+//  @UI.identification: [ {
+//    position: 190 , 
+//    label: 'Zinscompany'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 190 , 
+//    label: 'Zinscompany'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 190 
+//  } ]
+//  Zinscompany;
+//  
+//  @EndUserText.label: 'Zpolicyno'
+//  @UI.identification: [ {
+//    position: 200 , 
+//    label: 'Zpolicyno'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 200 , 
+//    label: 'Zpolicyno'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 200 
+//  } ]
+//  Zpolicyno;
+//  
+//  @EndUserText.label: 'Zidv'
+//  @UI.identification: [ {
+//    position: 210 , 
+//    label: 'Zidv'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 210 , 
+//    label: 'Zidv'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 210 
+//  } ]
+//  Zidv;
+//  
+//  @EndUserText.label: 'Zpolicytype'
+//  @UI.identification: [ {
+//    position: 220 , 
+//    label: 'Zpolicytype'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 220 , 
+//    label: 'Zpolicytype'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 220 
+//  } ]
+//  Zpolicytype;
+//  
+//  @UI.identification: [ {
+//    position: 230 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 230 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 230 
+//  } ]
+//  CreatedBy;
+//  
+//  @UI.identification: [ {
+//    position: 240 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 240 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 240 
+//  } ]
+//  CreatedAt;
+//  
+//  @UI.identification: [ {
+//    position: 250 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 250 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 250 
+//  } ]
+//  ChangedBy;
+//  
+//  @UI.identification: [ {
+//    position: 260 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 260 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 260 
+//  } ]
+//  ChangedAt;
+//  
+//  @UI.identification: [ {
+//    position: 270 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 270 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 270 
+//  } ]
+//  Localcreatedby;
+//  
+//  @UI.identification: [ {
+//    position: 280 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 280 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 280 
+//  } ]
+//  Localcreatedat;
+//  
+//  @UI.identification: [ {
+//    position: 290 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 290 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 290 
+//  } ]
+//  Locallastchangedby;
+//  
+//  @UI.identification: [ {
+//    position: 300 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 300 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 300 
+//  } ]
+//  Locallastchangedat;
+//  
+//  @UI.identification: [ {
+//    position: 310 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 310 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 310 
+//  } ]
+//  Lastchangedat;
+//  
+//  @EndUserText.label: '_BaseEntity'
+//  @UI.identification: [ {
+//    position: 320 , 
+//    label: '_BaseEntity'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 320 , 
+//    label: '_BaseEntity'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 320 
+//  } ]
+//  _BaseEntity;
+}

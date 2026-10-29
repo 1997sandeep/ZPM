@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_PmRoleAuthorization_S'
+define service ZUI_PMROLEAUTHORIZATION {
+  expose ZI_PMROLEAUTHORIZATION_S as PmRoleAuthorizatAll;
+  expose ZI_PMROLEAUTHORIZATION as PmRoleAuthorization;
+}

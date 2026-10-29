@@ -1,0 +1,8 @@
+@EndUserText.label: 'service Definition - Utilization & Performance report'
+define service ZPM_UTIL_PER {
+  expose ZPM_UTIL_PER;
+  expose ZPM_UTIL_PER_EQUIP;
+  expose ZSD_f4_Plant;
+  expose ZPM_F4_ObjectType;
+  expose ZSD_F4_EQUIPMENT;
+}

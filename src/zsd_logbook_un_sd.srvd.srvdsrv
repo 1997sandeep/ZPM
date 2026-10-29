@@ -1,0 +1,9 @@
+@EndUserText.label: 'Service Definition - Logbook entry'
+define service ZSD_LOGBOOK_UN_SD {
+  expose ZSD_LOGBOOK_F1;
+  expose ZSD_LOGBOOK_UN;
+  expose ZPM_F4_WBS;
+  expose ZPM_TECH_OBJ_TYPE_F4;
+  expose zlogbook_tmg_CDS;
+  expose ZC_MEASUREMENT_UOM   as UOM4;
+}

@@ -1,0 +1,41 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Maintain LOG BOOK USER TABLE",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_LOGBOOKUSERTABLE_O4",
+    "serviceName": "ZUI_LOGBOOKUSERTABLE_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "LogBookUserTableAll",
+    "name": "LOG BOOK USER TABLE",
+    "transportObject": "ZLOGBOOKUSERTABLET",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "LogBookUserTableAll",
+        "variantManagement": "control",
+        "showTransportSelectionStrip": true
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "LogBookUserTable",
+        "tableType": "gridTable",
+        "selectAll": true,
+        "rowCountMode": "auto",
+        "frozenColumnCount": 1,
+        "creationModeName": "inlineCreationRows",
+        "createAtEnd": true,
+        "condensedTableLayout": true,
+        "widthIncludingColumnHeader": true
+      }
+    ]
+  }
+}

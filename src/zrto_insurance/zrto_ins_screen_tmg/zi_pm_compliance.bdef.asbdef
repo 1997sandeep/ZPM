@@ -1,0 +1,61 @@
+unmanaged implementation in class zbp_i_pm_compliance unique;
+strict ( 2 );
+
+define behavior for ZI_PM_COMPLIANCE
+lock master
+authorization master ( instance )
+etag master LocalLastChangedAt
+{
+
+  create ( authorization : global );
+  update;
+  delete;
+
+  field ( readonly ) createdby,
+  createdon,
+  changedby,
+  changedon,
+  LocalLastChangedAt,
+  LastChangedAt;
+
+  field ( readonly : update ) ComplianceType;
+  field ( readonly : update ) ComplianceNumber, Equipment;
+
+  mapping for zpmt_compliance
+    {
+      Equipment          = zequipment;
+      ComplianceType     = zcomptype;
+      Plant              = zplant;
+      ComplianceNumber   = zcompliance_number;
+      ReceiptNo          = zreceipt;
+      StartDate          = zstdate;
+      ExpiryType         = zexptype;
+      ObjectType         = zobjecttype;
+      EndDate            = zenddate;
+      Currency           = zcurrency;
+      Amount             = zamount;
+      Tax                = ztax;
+      Total              = ztotal;
+      State              = zstate;
+      OwnerName          = zowner;
+      DMS                = zdms;
+      FileNo             = zfile;
+      MimeType           = zmimetype;
+      FileName           = zfilename;
+      Remark             = zremark;
+      InsuranceType      = zinstype;
+      InsuranceCompany   = zinscompany;
+      PolicyNo           = zpolicyno;
+      IDV                = zidv;
+      PolicyType         = zpolicytype;
+      FunctionalLocation = zfuncationllocation;
+      FlagCU             = zflagcu;
+      Flag               = zflag;
+      LocalLastChangedAt = locallastchangedat;
+      Zdrivelicanceno = zdrivelicanceno;
+      Zdriveradhar = zdriveradhar;
+      Zdrivername = zdrivername;
+      Zdriverfromdate = zdriverfromdate;
+      Zdrivertodate = zdrivertodate;
+    }
+}

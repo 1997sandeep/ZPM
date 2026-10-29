@@ -1,0 +1,92 @@
+managed with additional save implementation in class ZBP_I_LOGBOOKUSERTABLE_S unique;
+strict ( 1 );
+with draft;
+define behavior for ZI_LogBookUserTable_S alias LogBookUserTableAll
+draft table ZLOGBOOK_TM_D_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+{
+  field ( readonly )
+   SingletonID;
+
+  field ( features : instance )
+   TransportRequestID;
+
+  field ( notrigger )
+   SingletonID,
+   LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit with additional implementation;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare {
+    validation LogBookUserTable ~ ValidateDataConsistency;
+  }
+  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _LogBookUserTable { create ( features : instance ); with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT
+  {
+    create;
+    update;
+  }
+
+  side effects
+  {
+    action SelectCustomizingTransptReq affects
+        $self;
+  }
+
+}
+
+define behavior for ZI_LogBookUserTable alias LogBookUserTable ##UNMAPPED_FIELD[SingletonID]
+persistent table ZLOGBOOK_TMG_TBL
+draft table ZLOGBOOK_TMG__D
+lock dependent by _LogBookUserTableAll
+authorization dependent by _LogBookUserTableAll
+{
+  field ( mandatory : create )
+   Usirid;
+
+  field ( readonly )
+   SingletonID;
+
+  field ( readonly : update )
+   Usirid;
+
+  field ( notrigger )
+   SingletonID;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZLOGBOOK_TMG_TBL
+  {
+    Usirid = USIRID;
+    Name = NAME;
+  }
+
+  association _LogBookUserTableAll { with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT
+  {
+    create;
+    update;
+    delete;
+  }
+  validation ValidateDataConsistency on save
+  {
+    create;
+    update;
+  }
+
+}

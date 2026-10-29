@@ -1,0 +1,60 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'PM Role Authorization For ERN Process', 
+    typeNamePlural: 'PM Role Authorization For ERN Process', 
+    title: {
+      type: #STANDARD, 
+      value: 'Werks'
+    }
+  }
+}
+annotate view ZI_PmRoleAuthorization with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'PmRoleAuthorization', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'PM Role Authorization For ERN Process', 
+    position: 1 
+  } ]
+  Werks;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  ApprovalRole;
+  
+  @UI.identification: [ {
+    position: 3 
+  } ]
+  @UI.lineItem: [ {
+    position: 3 
+  } ]
+  ApprovalSeqLevel;
+  
+  @UI.identification: [ {
+    position: 4 
+  } ]
+  @UI.lineItem: [ {
+    position: 4 
+  } ]
+  UserId;
+  
+  @UI.identification: [ {
+    position: 5 
+  } ]
+  @UI.lineItem: [ {
+    position: 5 
+  } ]
+  LevelDes;
+}

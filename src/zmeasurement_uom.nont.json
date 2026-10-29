@@ -1,0 +1,11 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "zmeasurement_uom",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "name": "zmeasurement_uom",
+  "sapObjectType": "zmeasurement_uom",
+  "rootNode": true
+}

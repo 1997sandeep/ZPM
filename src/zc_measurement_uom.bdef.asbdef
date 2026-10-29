@@ -1,0 +1,23 @@
+projection implementation in class ZBP_C_MEASUREMENT_UOM unique;
+strict ( 2 );
+extensible;
+use draft;
+use side effects;
+define behavior for ZC_MEASUREMENT_UOM alias ZcMeasurementUom
+extensible
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+   field ( mandatory : create ) UomDes;
+   field ( mandatory : create ) uom;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+}

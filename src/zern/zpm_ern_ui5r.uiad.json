@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "ERN Process.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "ERN Process"
+  },
+  "ui5AppDetails": {
+    "appId": "zpmern"
+  },
+  "navigation": {
+    "targetMappingId": "ZPM_ERN_UI5R_TM",
+    "semanticObject": "zpm_ern",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "ZPM_ERN_UI5R_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ERN Process",
+        "subtitle": "ERN"
+      }
+    }
+  ]
+}

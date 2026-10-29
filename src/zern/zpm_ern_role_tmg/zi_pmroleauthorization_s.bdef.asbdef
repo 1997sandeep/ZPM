@@ -1,0 +1,101 @@
+managed with additional save implementation in class ZBP_I_PMROLEAUTHORIZATION_S unique;
+strict ( 1 );
+with draft;
+define behavior for ZI_PmRoleAuthorization_S alias PmRoleAuthorizatAll
+draft table ZPM_ERN_ROL_D_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+{
+  field ( readonly )
+   SingletonID;
+
+  field ( features : instance )
+   TransportRequestID;
+
+  field ( notrigger )
+   SingletonID,
+   LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit with additional implementation;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare {
+    validation PmRoleAuthorization ~ ValidateDataConsistency;
+  }
+  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _PmRoleAuthorization { create ( features : instance ); with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT
+  {
+    create;
+    update;
+  }
+
+  side effects
+  {
+    action SelectCustomizingTransptReq affects
+        $self;
+  }
+
+}
+
+define behavior for ZI_PmRoleAuthorization alias PmRoleAuthorization ##UNMAPPED_FIELD[SingletonID]
+persistent table ZPM_ERN_ROLE
+draft table ZPM_ERN_ROLE_D
+lock dependent by _PmRoleAuthorizatAll
+authorization dependent by _PmRoleAuthorizatAll
+{
+  field ( mandatory : create )
+   Werks,
+//   ApprovalRole,
+   ApprovalSeqLevel;
+//   UserId;
+
+  field ( readonly )
+   SingletonID;
+
+  field ( readonly : update )
+   Werks,
+//   ApprovalRole,
+   ApprovalSeqLevel;
+//   UserId;
+
+  field ( notrigger )
+   SingletonID;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZPM_ERN_ROLE
+  {
+    Werks = WERKS;
+    ApprovalRole = APPROVAL_ROLE;
+    ApprovalSeqLevel = APPROVAL_SEQ_LEVEL;
+    UserId = USER_ID;
+    LevelDes = LEVEL_DES;
+  }
+
+  association _PmRoleAuthorizatAll { with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT
+  {
+    create;
+    update;
+    delete;
+  }
+  validation ValidateDataConsistency on save
+  {
+    create;
+    update;
+  }
+
+}

@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_LogBookUserTable_S'
+define service ZUI_LOGBOOKUSERTABLE {
+  expose ZI_LOGBOOKUSERTABLE_S as LogBookUserTableAll;
+  expose ZI_LOGBOOKUSERTABLE as LogBookUserTable;
+}

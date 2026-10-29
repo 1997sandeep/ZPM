@@ -1,0 +1,9 @@
+CLASS zbp_i_pm_compliance DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_pm_compliance.
+protected section.
+private section.
+ENDCLASS.
+
+
+
+CLASS ZBP_I_PM_COMPLIANCE IMPLEMENTATION.
+ENDCLASS.

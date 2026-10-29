@@ -1,0 +1,92 @@
+unmanaged implementation in class zbp_pm_c_equip_unmanage unique;
+strict ( 1 );
+
+define behavior for ZPM_C_EQUIP_UNMANAGE //alias <alias_name>
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  //  field ( readonly : update )
+  //ZequipmentId,
+  //ZequipmentDesc,
+  //ZchassisNo,
+  //ZengineNo,
+  //ZregNo;
+
+  //field ( readonly ) CreatedBy, ChangedBy, CreatedAt, ChangedAt;
+
+  create;
+  update;
+  delete;
+  //  changedocuments (update :data );
+  /*validation validateDates on save { create; field Zregdate, Zregedate,Zfitnessedate,Zfitnesssdate,
+   Zinsodedate,Zinsodsdate,Zinstpsdate,zinstpedate,Zpermitedate,Zpermitsdate,
+   Zpucedate,Zpucsdate,Zvehtaxedate,Zvehtaxsdate; }
+   */
+  mapping for zpm_equipments
+    {
+      ZequipmentId       = zequipment_id;
+      ZregNo             = zreg_no;
+//      ZchassisNo         = zchassis_no;
+//      ZengineNo          = zengine_no;
+      Zentaxamt          = zentaxamt;
+      Zclaim             = zclaim;
+      Zentaxdate         = zentaxdate;
+      Zentaxedate        = zentaxedate;
+      Zentaxsdate        = zentaxsdate;
+      ZequipmentDesc     = zequipment_desc;
+      Zfitnessedate      = zfitnessedate;
+      Zfitnesssdate      = zfitnesssdate;
+      Zidv               = zidv;
+      Zinsodedate        = zinsodedate;
+      Zinsodsdate        = zinsodsdate;
+      Zinsplace          = zinsplace;
+      Zinstpedate        = zinstpedate;
+      Zinstpsdate        = zinstpsdate;
+      Zinsuco            = zinsuco;
+      Zpermitedate       = zpermitedate;
+      Zpermitsdate       = zpermitsdate;
+      Zpolicydate        = zpolicydate;
+      Zpolicyno          = zpolicyno;
+      Zpolicyprem        = zpolicyprem;
+      Zpucedate          = zpucedate;
+      Zpucno             = zpucno;
+      Zpucsdate          = zpucsdate;
+      Zregdate           = zregdate;
+      Zregedate          = zregedate;
+      Zvehtaxamt         = zvehtaxamt;
+      Zvehtaxdate        = zvehtaxdate;
+      Zvehtaxedate       = zvehtaxedate;
+      Zvehtaxsdate       = zvehtaxsdate;
+      Zplant             = zplant;
+      Zobjtyp            = zobjtyp;
+      Remarks            = remarks;
+      RemarksIns         = remarksi;
+      Previous           = previous;
+      Present            = present;
+      Fieldname          = fieldname;
+      LastChangedAt      = last_changed_at;
+      LocalCreatedAt     = local_created_at;
+      LocalCreatedBy     = local_created_by;
+      LocalLastChangedAt = local_last_changed_at;
+      LocalLastChangedBy = local_last_changed_by;
+      Zentaxdate1        = zentaxdate1;
+      Zentaxedate1       = zentaxedate1;
+      Zentaxsdate1       = zentaxsdate1;
+      Zfitnessedate1     = zfitnessedate1;
+      Zfitnesssdate1     = zfitnesssdate1;
+      Zinsodedate1       = zinsodedate1;
+      Zinsodsdate1       = zinsodsdate1;
+      Zinstpedate1       = zinstpedate1;
+      Zinstpsdate1       = zinstpsdate1;
+      Zpermitedate1      = zpermitedate1;
+      Zpermitsdate1      = zpermitsdate1;
+      Zpolicydate1       = zpolicydate1;
+      Zpucsdate1         = zpucsdate1;
+      Zregdate1          = zregdate1;
+      Zregedate1         = zregedate1;
+      Zvehtaxdate1       = zvehtaxdate1;
+      Zvehtaxedate1      = zvehtaxedate1;
+      Zvehtaxsdate1      = zvehtaxsdate1;
+    }
+}

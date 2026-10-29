@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Equipment Logbook Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Equipment Equipment Logbook"
+  },
+  "ui5AppDetails": {
+    "appId": "log.book.zlogbook"
+  },
+  "navigation": {
+    "targetMappingId": "YLOGBOOK_2_UI5R_TM",
+    "semanticObject": "SemLogBook",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "YLOGBOOK_2_UI5R_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Equipment Equipment Logbook",
+        "subtitle": "Equipment Equipment Logbook"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+@Metadata.layer: #CORE
+annotate entity ZC_ERN_PROCESS with
+{
+  @UI.lineItem:       [{ position: 10, label: 'Plant No' }]
+  @UI.identification: [{ position: 10, label: 'Plant No' }]
+  Werks;
+  @UI.lineItem:       [{ position: 20, label: 'Req Noo' }]
+  @UI.identification: [{ position: 20, label: 'Req No' }]
+  Req_No;
+
+}

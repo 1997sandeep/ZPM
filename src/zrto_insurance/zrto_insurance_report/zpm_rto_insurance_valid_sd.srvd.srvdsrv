@@ -1,0 +1,6 @@
+@EndUserText.label: 'RTO & INSURANCE VALIDITY REPORT'
+define service ZPM_RTO_INSURANCE_VALID_SD {
+  expose ZPM_RTO_INSURANCE_VALID;
+  expose ZPM_F4_Plant;
+  expose ZPM_F4_Equpiment;
+}

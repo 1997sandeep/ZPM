@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Equipment Logbook TMG"
+  },
+  "ui5AppDetails": {
+    "appId": "eqplogbooktmg"
+  },
+  "navigation": {
+    "targetMappingId": "ZEQPLOGBOOKTMG_UI5R_TM",
+    "semanticObject": "ZSOEQPLOGBOOKTMG",
+    "action": "Disply",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "ZEQPLOGBOOKTMG_UI5R_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Equipment Logbook TMG"
+      }
+    }
+  ]
+}

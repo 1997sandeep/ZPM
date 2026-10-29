@@ -1,0 +1,9 @@
+@EndUserText.label: 'Service Definition - RTO & Insurance'
+define service ZPM_C_EQUIP_UNMANAGE_SD {
+  expose ZPM_C_EQUIP_UNMANAGE;
+  expose ZEQUIP_CHANGELOG_C;
+  expose ZPM_RTPINS;
+  expose ZPM_RTO;
+  expose ZPM_RTOU;
+  expose ZPM_RTPINSU;
+}

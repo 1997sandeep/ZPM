@@ -1,0 +1,8 @@
+@EndUserText.label: 'Service Definition for Compliance Data Management'
+define service ZPM_COMPLIANCE_MANAGE_SD {
+  expose ZI_PM_COMPLIANCE;
+  expose ZI_PM_COMPLIANCE_CHK;
+  expose ZPM_PLANT_F4         as Plant_F4;
+  expose ZI_VH_PLANT          as Functional_Loc;
+  expose ZI_VH_EQUIPMENT      as Equipment_F4;
+}
